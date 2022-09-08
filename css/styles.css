@@ -21,22 +21,43 @@ body {
     background-color: var(--base-backgroud-color);
     
 }
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+p {
+   margin: 0;
+   padding: 0;
+    }
 
 .section-list,
 .worker-list {
     list-style: none;
 }
 
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
  /* logo */
 
 .logo {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.2;    
-        letter-spacing: 0.03em;
-        text-decoration: none;
-        color: var(--logo-color) ;
+    margin-right: 93px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;    
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--logo-color) ;
+    font-family: 'Raleway', sans-serif;
 }
 
 .logoweb {
@@ -49,8 +70,30 @@ body {
 /* heder */
 
 /* nav */
-.navigation-item {
 
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-list {
+    display: flex;
+    list-style: none;
+}
+
+
+.navigation-item {
+    margin-right: 50px;  
+}
+
+.navigation-item:last-child {
+    margin-right: 0;
+}
+
+.navigation-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.15;
@@ -60,7 +103,20 @@ body {
 
 }
 
+.navigation-contact-list {
+    margin-left: auto;
+    
+    display: flex;
+    list-style: none;
+}
+
+.navigation-contact-item:first-child {
+    margin-right: 50px;
+}
+
 .navigation-contact {
+    
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -71,20 +127,23 @@ body {
 
 
 
-.navigation-item:hover,
-.navigation-item:focus,
+.navigation-link:hover,
+.navigation-link:focus,
 .navigation-contact:hover,
 .navigation-contact:focus
 {
 color: var(--accent-color);
 }
 
-.navigation-list {
-    list-style: none;
+
+
+.navigation-link.current {
+    color: var(--accent-color);
 }
 
-.navigation-item.current {
-    color: var(--accent-color);
+.container.head {
+    display: flex;
+    align-items: center;
 }
 
 /* hero */
